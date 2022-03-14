@@ -49,18 +49,17 @@ for url in articleLinks:
         pass
 
 
-print(finalOutput)
+# print(finalOutput)
 
 
 # using pandas library to create a table
-# table = DataFrame({
-#     "NAME OF ARTICLE": [item.get("nameOfArticle") for item in finalOutput],
-#     "ABSTRACT OF ARTICLE": [item.get("abstractOfArticle") for item in finalOutput],
-# })
-
+table = DataFrame({
+    "NAME OF ARTICLE": [item.get("nameOfArticle") for item in finalOutput],
+    "ABSTRACT OF ARTICLE": [item.get("abstractOfArticle") for item in finalOutput],
+})
 
 # using csv method to create csv file containing the name and abstract of articles
-# table.to_csv("output.csv")
+table.to_csv("output.csv")
 
 
 # excel_table = ExcelWriter("output.xlsx", engine="xlsxwriter")
